@@ -9,13 +9,15 @@ class subjects
 
     public:
     void show(void);
-}
+};
 
 void subjects :: show(void)
 {
-    cout<<maths<<physics<<chemistry;
+    cout<<maths<<endl<<physics<<endl<<chemistry;
 }
 int main ()
 {
     subjects s;
+    s.show();
+    return 0;
 }
