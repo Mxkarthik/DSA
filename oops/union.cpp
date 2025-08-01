@@ -2,6 +2,17 @@
 #include <cstring>
 using namespace std;
 
+/*
+
+    union: a user-defined data type in which all members share the same memory space.
+    The size of the union is determined by its largest member.
+    At any given time, a union can hold a value for only one of its members.
+    Assigning a value to one member overwrites the previous data stored in the union.
+    Unions are useful when you want to store values of different types in the same memory 
+    location, but not simultaneously.
+
+*/
+
 union person
 {
     char name[30];
