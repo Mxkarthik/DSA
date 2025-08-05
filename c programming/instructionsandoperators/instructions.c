@@ -28,6 +28,11 @@ int main()
     // there is no operator to perform exponential in c 
 
     printf("The value of 4 ^ 5 is  %f \n", pow(2,5)); // this is a double
+
+
+    printf("The value of 6 + 5 is %d\n", 6 + 5);
+    printf("The value of 6 + 5.6 %d\n", 6 + 5.6); // the operation between int and float is float
+    printf("The value of 6.1 + 5.6 %f\n", 6.1 + 5.1);
  
     return 0;
 }
