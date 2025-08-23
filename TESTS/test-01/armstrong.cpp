@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 bool check_armstrong (int number , int size)
@@ -7,6 +8,7 @@ bool check_armstrong (int number , int size)
         Armstrong number is a number in which a digit in a number 
         is is raised to the power of no of digits is called armstong number 
     */
+   int temp = number;
    if (number == 0)
        return true;
 
@@ -18,15 +20,18 @@ bool check_armstrong (int number , int size)
     int result = 0;
     while (number > 0)
     {
-        last_digit = number % 10;
-        number = number / 10;
+        last_digit = number % 10; // taking last digit 
+        number = number / 10; // removing last digit
 
-        result += last_digit*multipliyer;
+        result += pow(last_digit,size);
     }
 
-    if (number == result)
+    if (temp == result)
+    {
         return true;
-    
+    }
+
+    return false;
 }
 
 int main ()
@@ -38,10 +43,10 @@ int main ()
     int size;
     cout<<"Please enter the size of the number"<<endl;
     cin>>size;
-    check_armstrong(number,size);
+    int value = check_armstrong(number,size);
 
     // checking if the number is armstrong
-    if(check_armstrong)
+    if(value)
     {
         cout<<"Yes the number is armstrong";
     }
