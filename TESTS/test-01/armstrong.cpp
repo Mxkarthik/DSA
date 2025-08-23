@@ -40,9 +40,7 @@ int main ()
     cout<<"Please enter the number "<<endl;
     cin>>number;
 
-    int size;
-    cout<<"Please enter the size of the number"<<endl;
-    cin>>size;
+    int size = (number == 0) ? 1 : (int) log10(number) + 1; // this automatically calculates the size of the number
     int value = check_armstrong(number,size);
 
     // checking if the number is armstrong
