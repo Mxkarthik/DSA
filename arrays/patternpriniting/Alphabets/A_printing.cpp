@@ -8,13 +8,14 @@ void A_printing (int size)
     {
         for (int j = 1 ; j <= size ; j++)
         {
-            if (i==1 && j == mid)
+            if (i==1 && j == mid) // top star
                 cout<<"*";
-            else if(i == mid && (j > mid - (i - 1) && j < mid + (i - 1)))
+            else if(i == mid && (j > mid - (i - 1) && j < mid + (i - 1))) // middle row
                 cout<<"*";
-            else if((i> 1) && (j==mid-1 || j == mid+1))
+            else if((i> 1) && (j==mid-1 || j == mid+1)) // left leg and right leg
                 cout<<"*";
             else 
+            
                 cout<<" ";
         }
         cout<<"\n";
