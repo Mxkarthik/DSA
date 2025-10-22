@@ -32,8 +32,8 @@ long long division ( long long inverse , long long base , long long mod)
 
 int main ()
 {
-    long long n = 2, mod = 7;
-    long long exponent = n-2;
+    long long  mod = 7;
+    long long exponent = mod-2;
     long long inverse = mod_inv (4,exponent,mod);
     long long division_of_modulo = division(inverse , 2 , 7);
     cout<<"the division of the both number is "<<division_of_modulo;
