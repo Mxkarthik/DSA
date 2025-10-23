@@ -1,10 +1,10 @@
 #include <iostream>
 using namespace std;
 
-int count = 0;
+const long long MOD = 1000000007;
+
 long long moduloar_exp(long long base , long long exponent, long long modulous)
 {
-   count += 1;
    if ( exponent == 0 )
    {
     return 1;
@@ -27,10 +27,18 @@ long long moduloar_exp(long long base , long long exponent, long long modulous)
 
 int main ()
 { 
-  long long base; cout<<"Please enter the base :"; cin>> base;
-  long long exponent; cout<<"Please enter the exponent :"; cin>>exponent;
-  long long output = moduloar_exp(base,exponent,1e9+7);
-  cout<<"the exponent of the provided a and b :"<<output;
-  cout<<"\nThe Number of steps for recurssion :"<<count;
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  int n;
+  cin >> n; // number of test cases
+
+    while (n--)
+    {
+        long long base, exponent;
+        cin >> base >> exponent;
+
+        cout << moduloar_exp(base, exponent, MOD) << "\n";
+    }
   return 0;
 }
