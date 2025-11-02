@@ -1,10 +1,18 @@
 #include <iostream>
+#include <algorithm>
 #include <string>
+#include <math.h>
 using namespace std;
 
-void recurssion (int n)
+void solution (int n)
 {
-    int last ; string ans[100]; int digits = log10(n)+1;
+    int last ; string ans; int digits = log10(n)+1;
+    if(n == 0)
+    {
+        ans = "You entered zero so there is no other element to print";
+        cout<<ans;
+        return;
+    }
     for(int i = 0 ; i < digits ; i++)
     {
         last = n % 10;
@@ -14,15 +22,17 @@ void recurssion (int n)
         }
         else 
         {
-            ans += (string) last;
+            ans += (char) ('0' + last);
             n = n/10; 
         }
     }
+    reverse(ans.begin(), ans.end());
+    cout<<ans;
 }
 int main ()
 {
     int n;cout<<"Please enter the number";
     cin>>n;
-    recurssion(n);
+    solution(n);
     return 0;
 }
