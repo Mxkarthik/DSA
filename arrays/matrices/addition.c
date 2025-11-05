@@ -4,7 +4,7 @@ void addition (int r1 , int c1 , int r2 , int c2)
 {
     int array1 [r1] [c1];
     int array2 [r2] [c2];
-    if (c1 != r2)
+    if ( r1 != r2 || c1 != c2)
     {
         printf("This is not a square matrix");
         return;
@@ -47,7 +47,7 @@ void addition (int r1 , int c1 , int r2 , int c2)
    {
         for (int j = 0 ; j < c1 ; j++)
         {
-            printf("%d\t" ,additionarray[i] [j]);
+            printf("%4d" ,additionarray[i] [j]);
         }
         printf("\n");
    }
