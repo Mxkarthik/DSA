@@ -8,8 +8,7 @@ vector<int> findXSum(vector <int> &nums , int k , int x)
     //2. now we will keep only top x elements and also check if the top x elements frequience is same 
     //3. if same then we will check the elements the greater element will be considered the more frequent
     //4. calculate the sum of resulting array
-    int size = nums.size();
-    vector<int> freq(size);
+    vector<int> freq;
     // now checking for occurence 
     for(int ele : nums)
     {
@@ -19,9 +18,9 @@ vector<int> findXSum(vector <int> &nums , int k , int x)
             if(ele == nums[i])
             {
                 occurence++;
-                freq.push_back(occurence);
             }
         }
+        freq.push_back(occurence);
     }
 
     // now testing ths code 
