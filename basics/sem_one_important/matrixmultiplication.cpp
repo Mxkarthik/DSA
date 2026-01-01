@@ -30,9 +30,18 @@ void matrixmultipliaction ()
             scanf("%d",&array[i][j]);
         }
     }
-    for (int i = 0 ; i < r1 ; i++)
+    // intialising the result matrix with 0 
+    for (int i = 0 ; i < c1 ; i++)
     {
-        for (int j = 0 ; i < c1 ; i++)
+        for(int j = 0 ; j < r2 ; j++)
+        {
+            result[i][j] = 0;
+        }
+    }
+
+    for (int i = 0 ; i < c1 ; i++)
+    {
+        for (int j = 0 ; i < r1 ; i++)
         {
             for (int k = 0 ; i < c2 ; i++ )
             {
