@@ -14,7 +14,7 @@ string LongestCommonPrefix (vector <string> &str)
         {
             if (ch == str[j][i])
             {
-                str += ch;
+                str += cxh;
             }
             else
             {
