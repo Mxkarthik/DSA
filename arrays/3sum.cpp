@@ -10,7 +10,10 @@ vector <int> triplets (vector <int> array)
         {
             for(int k = j+1 ; k < array.size() ; k++)
             {
-                
+                if(array[i] + array[j] + array[k] == 0)
+                {
+                    
+                }
             }
         }
     }
