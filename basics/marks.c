@@ -20,4 +20,5 @@ int main(int argc, char *argv[]) {
     printf("Student Name: %s\n", name);
     printf("Total Marks: %d\n", total); 
     return 0;
+    // end of the program 
 }
