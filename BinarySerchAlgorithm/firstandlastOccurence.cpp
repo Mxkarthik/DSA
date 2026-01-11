@@ -66,5 +66,6 @@ int main()
         result.push_back(up-1);
     }
     cout<<result[0]<<" "<<result[1]<<"\n";
+    //upper bound and lower bound are solved using two binary searches 
     return 0;
 }
