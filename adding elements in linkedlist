@@ -1,0 +1,81 @@
+#include <iostream>
+
+using namespace std;
+
+// 1. Define the Node structure
+struct Node {
+    int data;     // Data stored in the node
+    Node* next;   // Pointer to the next node in the list
+
+    // Constructor to easily create a new node
+    Node(int val) : data(val), next(nullptr) {}
+};
+
+// Function to insert a new node at the beginning of the list (Insert at Head)
+void insertAtHead(Node*& head, int newData) {
+    Node* newNode = new Node(newData); // Create a new node
+    newNode->next = head;              // Point the new node's next to the current head
+    head = newNode;                    // Update the head to point to the new node
+}
+
+// Function to insert a new node at the end of the list (Append)
+void insertAtEnd(Node*& head, int newData) {
+    Node* newNode = new Node(newData); // Create a new node
+
+    // If the list is empty, make the new node the head
+    if (head == nullptr) {
+        head = newNode;
+        return;
+    }
+
+    // Traverse to the last node
+    Node* last = head;
+    while (last->next != nullptr) {
+        last = last->next;
+    }
+
+    // Change the next pointer of the last node to the new node
+    last->next = newNode;
+}
+
+// Function to display the linked list
+void displayList(Node* head) {
+    Node* current = head;
+    if (current == nullptr) {
+        cout << "The list is empty." << endl;
+        return;
+    }
+    while (current != nullptr) {
+        cout << current->data << " -> ";
+        current = current->next;
+    }
+    cout << "nullptr" << endl;
+}
+
+int main() {
+    Node* head = nullptr; // Initialize an empty linked list
+
+    // Add elements to the list
+    insertAtHead(head, 10);
+    insertAtHead(head, 20);
+    insertAtHead(head, 30); // List is now: 30 -> 20 -> 10 -> nullptr
+
+    cout << "List after insertions at head: ";
+    displayList(head);
+
+    insertAtEnd(head, 5); // List is now: 30 -> 20 -> 10 -> 5 -> nullptr
+
+    cout << "List after insertion at end: ";
+    displayList(head);
+
+    // Memory cleanup (important to prevent memory leaks)
+    Node* current = head;
+    while (current != nullptr) {
+        Node* next = current->next;
+        delete current;
+        current = next;
+    }
+    head = nullptr;
+
+    return 0;
+}
