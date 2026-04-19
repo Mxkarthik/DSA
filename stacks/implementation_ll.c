@@ -58,10 +58,9 @@ void display ()
         temp = top;
         while (temp != NULL)
         {
-            printf("\n %d,", temp->data);
+            printf("\n %d\n", temp->data);
             temp = temp->next;
         }
-        printf("NULL");
     }
 }
 
@@ -72,8 +71,8 @@ int main ()
     {
         printf("\n Menu Card");
         printf("\n 1. push \n 2.pop \n 3.display \n 4.exit");
-        printf("\n Please enter your choice");
-        scanf("%d",&choice);
+        printf("\n Please enter your choice :");
+        scanf(" %d",&choice);
         switch(choice)
         {
             case 1 :
