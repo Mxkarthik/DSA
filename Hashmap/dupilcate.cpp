@@ -1,7 +1,9 @@
 #include <iostream>
 #include <vector>
 #include <unordered_set>
+#include <stdlib.h>
 using namespace std;
+
 
 bool duplicate(vector <int> &array)
 {
