@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-
+// weighted graph
 int main ()
 {
     int vertex , edge;
