@@ -8,5 +8,4 @@ def factorial (n):
 n = int(input("Please enter the value of n"))
 print(factorial(n),end=" ")
 
-
-    
+#recursion
