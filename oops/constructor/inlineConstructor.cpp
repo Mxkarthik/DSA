@@ -1,30 +1,29 @@
 #include <iostream>
 using namespace std;
 
-
-class Student 
+class Account 
 {
-    int roll_no;
-    int marks;
-    string name;
+    int account_number;
+    string account_holder_name;
+    int balance;
 
     public :
-    // inline constructor
-    inline Student ( int r , int m , string n) : roll_no(r),marks(m),name(n){
+    inline Account (int acn , string ahn , int b) : account_number(acn) , account_holder_name(ahn) , balance(b)
+    {
 
     }
 
     void display () 
     {
-        cout<<roll_no<<"\n";
-        cout<<marks<<"\n";
-        cout<<name<<"\n";
+        cout <<"Account Number"<<"\n"<<account_number;
+        cout<<"Account Holder Name"<<"\n"<<account_holder_name;
+        cout<<"Balance :"<<"\n"<<balance;
     }
 };
 
 int main ()
 {
-    Student s(25,900,"Karthik");
-    s.display();
+    Account a(435435 , "Karthik", 3249349);
+    a.display();
     return 0;
 }

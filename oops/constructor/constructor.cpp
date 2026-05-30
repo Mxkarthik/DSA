@@ -1,30 +1,33 @@
 #include <iostream>
 using namespace std;
 
-class Student 
-{
-    int roll_number;
-    int marks;
-    string name;
-    string grade;
+class Account {
+    int account_number;
+    string account_holder_name;
+    int balance;
 
-    public:
-    Student (int r , int m , string n , string g)
+    public :
+    Account (int account_number , string account_holder_name , int balance)
     {
-       this->name = n;
-       this->grade = g;
-       this->marks = m;
-       this->roll_number = r;
+        this->account_holder_name = account_number;
+        this->account_holder_name = account_holder_name;
+        this->balance = balance;
     }
-
-    void display (){
-        cout<<roll_number<<"\n"<<marks<<"\n"<<name<<"\n"<<grade;
+    void display () 
+    {
+        cout<<"Account Number : "<<"\n"<<account_number<<"\n";
+        cout<<"Account Holder Name :"<<"\n"<<account_holder_name<<"\n";
+        cout<<"Balance :"<<"\n"<<balance<<"\n";
     }
+    
 };
+
 
 int main ()
 {
-    Student s(25,900,"Karthik","A");
-
-    s.display();
+    Account a(256789,"Karthik",2000000);
+    a.display();
+    return 0;
 }
+
+
