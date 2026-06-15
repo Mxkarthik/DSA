@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-
+// Implimentation of Breath First Search and Depth First Search is in order
 int main ()
 {
     int vertex,edges;
