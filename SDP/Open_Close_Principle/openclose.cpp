@@ -45,7 +45,7 @@ class InvoicePrinter
     void printInvoice(const ShoppingCart& cart)
     {
         cout<<"Invoice Printed"<<"\n";
-         cout << "Total Amount: $" << cart.calculateTotal() << "\n";
+        cout << "Total Amount: $" << cart.calculateTotal() << "\n";
     }  
 };
 
@@ -83,7 +83,7 @@ int main ()
     cart->addProduct(new Product("Poco",500));
     cart->addProduct(new Product("Display",600));
 
-    
+
     ShoppingCart *sc = new ShoppingCart(*cart);
     sc->calculateTotal();
 
