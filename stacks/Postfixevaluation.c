@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <math.h>
-#include <ctype.h>
 #define MAX 100
 
 int stack[MAX];
@@ -69,6 +68,6 @@ int main ()
     char exp[MAX];
     printf("Enter postfix expression:");
     scanf("%s",exp);
-    printf("Result = %d\n", postfixexp(exp));
+    printf("Result = %d\n", evaluatepostfix(exp));
     return 0;
 }
